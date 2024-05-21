@@ -24,16 +24,18 @@ bin/
 .classpath
 .project
 
-# fleet
-
-.fleet/
-
 # macos
 
 *.DS_Store
 
 # fabric
 
-run/
+runClient/
+runServer/
 
-*.7z
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr

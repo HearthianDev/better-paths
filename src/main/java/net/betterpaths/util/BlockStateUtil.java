@@ -1,4 +1,4 @@
-package net.vanessencePaths.util;
+package net.betterpaths.util;
 
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockFace;

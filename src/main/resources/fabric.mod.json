@@ -1,29 +1,29 @@
 {
     "schemaVersion": 1,
-    "id": "vanessence-paths",
+    "id": "better-paths",
     "version": "${version}",
 
-    "name": "Vanessence paths",
+    "name": "Better paths",
     "description": "Tweak to allow paths to exist below traspassable blocks such as fence gates",
     "authors": [
         "Juarrin"
     ],
     "contact": {
-        "homepage": "https://github.com/John-Development/",
-        "sources": "https://github.com/John-Development/vanessence-paths"
+        "homepage": "https://github.com/HearthianDev/",
+        "sources": "https://github.com/HearthianDev/better-paths"
     },
 
     "license": "CC0-1.0",
-    "icon": "assets/modid/logo.png",
+    "icon": "assets/betterpaths/logo.png",
 
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.vanessencePaths.VanessencePaths"
+            "net.betterpaths.BetterPaths"
         ]
     },
     "mixins": [
-        "vanessence-paths.mixins.json"
+        "betterpaths.mixins.json"
     ],
 
     "depends": {

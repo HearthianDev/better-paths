@@ -1,4 +1,4 @@
-package net.vanessencePaths.mixin.block;
+package net.betterpaths.mixin.block;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DirtPathBlock;
@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static net.vanessencePaths.util.BlockStateUtil.BlockAllowedAboveDirtPathBlock;
+import static net.betterpaths.util.BlockStateUtil.BlockAllowedAboveDirtPathBlock;
 
 
 @Mixin(DirtPathBlock.class)
