@@ -19,7 +19,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.betterpaths.BetterPaths"
+            "net.HearthianDev.betterpaths.BetterPaths"
         ]
     },
     "mixins": [

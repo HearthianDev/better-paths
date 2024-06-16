@@ -1,4 +1,4 @@
-package net.betterpaths.util;
+package net.HearthianDev.betterpaths.util;
 
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockFace;

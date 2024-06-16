@@ -1,4 +1,4 @@
-package net.betterpaths.mixin.item;
+package net.HearthianDev.betterpaths.mixin.item;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
@@ -23,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.Map;
 
-import static net.betterpaths.util.BlockStateUtil.BlockAllowedAboveDirtPathBlock;
+import static net.HearthianDev.betterpaths.util.BlockStateUtil.BlockAllowedAboveDirtPathBlock;
 
 
 @Mixin(ShovelItem.class)

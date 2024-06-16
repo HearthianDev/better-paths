@@ -1,4 +1,4 @@
-package net.betterpaths;
+package net.HearthianDev.betterpaths;
 
 import net.fabricmc.api.ModInitializer;
 
