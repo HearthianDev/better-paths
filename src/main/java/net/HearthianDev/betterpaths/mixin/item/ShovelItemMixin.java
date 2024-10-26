@@ -19,7 +19,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.Map;
 
@@ -32,7 +31,7 @@ public class ShovelItemMixin {
 	@Shadow
 	protected static Map<Block, BlockState> PATH_STATES;
 
-	@Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemUsageContext;getWorld()Lnet/minecraft/world/World;"), locals = LocalCapture.CAPTURE_FAILSOFT, cancellable = true)
+	@Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemUsageContext;getWorld()Lnet/minecraft/world/World;"), cancellable = true)
 	public void useOnBlockMixin(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
 		World world = context.getWorld();
 		BlockPos blockPos = context.getBlockPos();
@@ -72,7 +71,7 @@ public class ShovelItemMixin {
 						playerEntity.swingHand(context.getHand());
 					}
 				}
-				cir.setReturnValue(ActionResult.success(world.isClient));
+				cir.setReturnValue(ActionResult.SUCCESS);
 			}
 		}
 	}
