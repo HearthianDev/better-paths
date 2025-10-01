@@ -24,7 +24,6 @@ import java.util.Map;
 
 import static net.HearthianDev.betterpaths.util.BlockStateUtil.BlockAllowedAboveDirtPathBlock;
 
-
 @Mixin(ShovelItem.class)
 public class ShovelItemMixin {
 	@Final

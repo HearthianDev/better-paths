@@ -6,14 +6,14 @@
     "name": "Better paths",
     "description": "Tweak to allow paths to exist below traspassable blocks such as fence gates",
     "authors": [
-        "Juarrin"
+        "HearthianDev"
     ],
     "contact": {
-        "homepage": "https://github.com/HearthianDev/",
+        "homepage": "https://github.com/HearthianDev",
         "sources": "https://github.com/HearthianDev/better-paths"
     },
 
-    "license": "CC0-1.0",
+    "license": "GPL-3.0",
     "icon": "assets/betterpaths/icon.png",
 
     "environment": "*",
