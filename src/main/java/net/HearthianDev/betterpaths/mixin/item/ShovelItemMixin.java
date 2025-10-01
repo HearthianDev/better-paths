@@ -1,7 +1,6 @@
 package net.HearthianDev.betterpaths.mixin.item;
 
 import net.minecraft.block.*;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShovelItem;
@@ -62,11 +61,11 @@ public class ShovelItemMixin {
 			}
 
 			if (blockState3 != null) {
-				if (!world.isClient) {
+				if (!world.isClient()) {
 					world.setBlockState(blockPos, blockState3, Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
 					world.emitGameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Emitter.of(playerEntity, blockState3));
 					if (playerEntity != null) {
-						context.getStack().damage(1, playerEntity, LivingEntity.getSlotForHand(context.getHand()));
+						context.getStack().damage(1, playerEntity, context.getHand().getEquipmentSlot());
 						playerEntity.swingHand(context.getHand());
 					}
 				}
