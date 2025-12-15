@@ -1,9 +1,9 @@
 package net.HearthianDev.betterpaths.mixin.block;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.DirtPathBlock;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.WorldView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.DirtPathBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -14,10 +14,10 @@ import static net.HearthianDev.betterpaths.util.BlockStateUtil.BlockAllowedAbove
 
 @Mixin(DirtPathBlock.class)
 public class DirtPathBlockMixin {
-	@Inject(method = "canPlaceAt", at = @At(value = "HEAD"), cancellable = true)
-	public void canPlaceAtMixin(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-		BlockState blockState = world.getBlockState(pos.up());
+    @Inject(method = "canSurvive", at = @At(value = "HEAD"), cancellable = true)
+    public void canPlaceAtMixin(BlockState state, LevelReader world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+        BlockState blockState = world.getBlockState(pos.above());
 
-		cir.setReturnValue(BlockAllowedAboveDirtPathBlock(blockState));
-	}
+        cir.setReturnValue(BlockAllowedAboveDirtPathBlock(blockState));
+    }
 }
